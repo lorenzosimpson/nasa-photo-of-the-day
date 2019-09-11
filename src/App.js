@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import Header from './components/Header';
-import Image from './components/Image';
+import ImageContainer from './components/ImageContainer';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Image />
+      <ImageContainer />
     </div>
   );
 }

@@ -3,10 +3,10 @@ import Axios from 'axios';
 
 
 
-function Image() {
+function ImageContainer() {
 
 //set state
-const [image, setImage] = useState([])
+const [image, setImage] = useState({})
 
 //add effect hook to get the data from api
 
@@ -16,6 +16,7 @@ useEffect(() => {
     .then(response => {
         console.log(response)
         const imgData = response.data;
+        setImage(imgData)
     })
     .catch(error => {
         console.log('returning an error: ', error)
@@ -24,7 +25,7 @@ useEffect(() => {
 
 
 return (
-    <div>hello</div>
+    <Image />
 )
 
 
@@ -42,4 +43,4 @@ return (
 
 
 
-export default Image;
+export default ImageContainer;

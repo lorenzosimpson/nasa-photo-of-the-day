@@ -26,7 +26,7 @@ useEffect(() => {
 
 
 return (
-    <Image url={image.url} title={image.title}/>
+    <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
 )
 
 }

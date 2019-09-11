@@ -4,9 +4,9 @@ const Image = props => {
     
     return (
         <div>
-            <img src={props.url} alt={props.title}></img>
-            <p>{props.date}</p>
             <h2>{props.title}</h2>
+            <p>{props.date}</p>
+            <img src={props.url} alt={props.title}></img>
             <p>{props.explanation}</p>
         </div>
     )

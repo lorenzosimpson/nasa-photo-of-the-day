@@ -13,6 +13,7 @@ function ImageContainer() {
 const [image, setImage] = useState({})
 
 
+
 //add effect hook to get the data from api
 
 useEffect(() => {
@@ -31,12 +32,7 @@ useEffect(() => {
 return (
     <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
 )
-
 }
-
-
-
-
 
 
 export default ImageContainer;

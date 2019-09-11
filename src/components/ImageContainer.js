@@ -11,8 +11,7 @@ function ImageContainer() {
 
 //set state
 const [image, setImage] = useState({})
-const formatDate = new Date(image.date)
-    console.log(formatDate)
+
 
 //add effect hook to get the data from api
 
@@ -21,7 +20,6 @@ useEffect(() => {
     .get(`https://api.nasa.gov/planetary/apod?api_key=9cllbbR77tFXH1mBYxWFwgcPm95KCBdh6ju5OMbM`)
     .then(response => {
         const data = response.data;
-        console.log(data)
         setImage(data)
     })
     .catch(error => {

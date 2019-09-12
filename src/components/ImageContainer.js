@@ -3,10 +3,16 @@ import Axios from 'axios';
 import Image from './Image';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
+import styled from 'styled-components';
 
 //API KEY: 9cllbbR77tFXH1mBYxWFwgcPm95KCBdh6ju5OMbM 
 
+const StyledContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+`
 
 
 function ImageContainer() {
@@ -32,7 +38,7 @@ useEffect(() => {
 
 
 return (
-    <div>
+    <StyledContainer>
     {
         !image.url ? (
             <div className="loader">
@@ -43,7 +49,7 @@ return (
             <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
         )
     }
-    </div>
+    </StyledContainer>
 )
 }
 

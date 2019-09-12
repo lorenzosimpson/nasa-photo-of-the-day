@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderStyled = styled.div`
-
+    font-family: 'Orbitron', sans-serif;
 `
 const Title = styled.h1`
     color: #2e2e2e;

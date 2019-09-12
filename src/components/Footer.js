@@ -16,7 +16,7 @@ const FooterTextStyled = styled.p`
 function Footer() {
     return (
         <FooterStyled>
-            <FooterTextStyled>Created by <LinkStyled href="https://lorenzosimpson.github.io/portfolio-website/">Lorenzo Simpson</LinkStyled></FooterTextStyled>
+            <FooterTextStyled>Created by <LinkStyled href="https://lorenzosimpson.github.io/portfolio-website/" target="blank">Lorenzo Simpson</LinkStyled></FooterTextStyled>
         </FooterStyled>
     )
 }

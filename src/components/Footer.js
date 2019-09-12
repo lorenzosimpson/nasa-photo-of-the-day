@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FooterStyled = styled.div`
+    letter-spacing: 2px;
+`
+const LinkStyled = styled.a`
+    text-decoration: none;
+`
 
 
 function Footer() {
     return (
-        <div className='footer-container'>
-            <h5>Created by Lorenzo Simpson</h5>
-        </div>
+        <FooterStyled>
+            <p>Created by <LinkStyled href="https://lorenzosimpson.github.io/portfolio-website/">Lorenzo Simpson</LinkStyled></p>
+        </FooterStyled>
     )
 }
 

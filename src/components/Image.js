@@ -13,9 +13,11 @@ const ImageTitleStyled = styled.h2`
 `
 const ImageStyled = styled.img`
     max-width: 1000px;
+    box-shadow: 0px 0px 20px black;
 `
 const ParagraphStyled = styled.p`
     width: 60%;
+    font-size: 1.3rem;
 `
 
 const Image = props => {

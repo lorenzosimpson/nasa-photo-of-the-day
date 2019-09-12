@@ -7,12 +7,16 @@ const FooterStyled = styled.div`
 const LinkStyled = styled.a`
     text-decoration: none;
 `
+const FooterTextStyled = styled.p`
+    margin: 0;
+    padding: 20px;
+`
 
 
 function Footer() {
     return (
         <FooterStyled>
-            <p>Created by <LinkStyled href="https://lorenzosimpson.github.io/portfolio-website/">Lorenzo Simpson</LinkStyled></p>
+            <FooterTextStyled>Created by <LinkStyled href="https://lorenzosimpson.github.io/portfolio-website/">Lorenzo Simpson</LinkStyled></FooterTextStyled>
         </FooterStyled>
     )
 }

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import Image from './Image';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from 'react-loader-spinner';
 
 //API KEY: 9cllbbR77tFXH1mBYxWFwgcPm95KCBdh6ju5OMbM 
 
@@ -30,7 +32,18 @@ useEffect(() => {
 
 
 return (
-    <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
+    <div>
+    {
+        !image.url ? (
+            <div className="loader">
+                <h3>Loading...</h3>
+                <Loader type="TailSpin" color="black" height={80} width={80} />
+            </div>
+        ) : (
+            <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
+        )
+    }
+    </div>
 )
 }
 

@@ -29,6 +29,7 @@ useEffect(() => {
     .get(`https://api.nasa.gov/planetary/apod?api_key=9cllbbR77tFXH1mBYxWFwgcPm95KCBdh6ju5OMbM`)
     .then(response => {
         const data = response.data;
+        console.log(data)
         setImage(data)
     })
     .catch(error => {
@@ -46,7 +47,7 @@ return (
                 <Loader type="TailSpin" color="black" height={80} width={80} />
             </div>
         ) : (
-            <Image url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
+            <Image hdUrl={image.hdurl} url={image.url} title={image.title} explanation={image.explanation} date={image.date}/>
         )
     }
     </StyledContainer>

@@ -14,6 +14,10 @@ const ImageTitleStyled = styled.h2`
 const ImageStyled = styled.img`
     max-width: 1000px;
     box-shadow: 0px 0px 20px black;
+    transition: 0.5s ease-in;
+    &:hover {
+        transform: scale(1.05)
+    }
 `
 const ParagraphStyled = styled.p`
     width: 60%;
@@ -24,7 +28,7 @@ const Image = props => {
     
     return (
         <ImageBlock>
-            <ImageStyled src={props.url} alt={props.title}></ImageStyled>
+            <a href={props.hdUrl} target="_blank"><ImageStyled src={props.url} alt={props.title}></ImageStyled></a>
             <ImageTitleStyled>{props.title.toUpperCase()}</ImageTitleStyled>
             <p>{props.date}</p>
             <ParagraphStyled>{props.explanation}</ParagraphStyled>
